@@ -1,4 +1,4 @@
-Set-Location "D:\Development\Code\PowerShell\powershell-multiline-replace\test"
+Set-Location "D:\path\to\powershell-multiline-replace\test"
 
 $file_names = (Get-ChildItem).Name
 

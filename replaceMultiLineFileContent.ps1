@@ -1,24 +1,34 @@
-Set-Location "C:\Path\to\powershell-multiline-replace\test"
+Set-Location "D:\Development\Code\PowerShell\powershell-multiline-replace\test"
 
 $file_names = (Get-ChildItem).Name
 
 $oldCode = [Regex]::Escape(@"
     
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"/>
-"@) -replace ( '((\\ )|(\\t))+' , '\s+' ) -replace ( '(\\r)?\\n' , '\r?\n' )
-
-
-$newCode = @"
-
-    AnythingNew
+    </LinearLayout>
     
     <TextView
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"/>
+
+
+</LinearLayout>
+"@) -replace ( '((\\ )|(\\t))+' , '\s+' ) -replace ( '(\\r)?\\n' , '\r?\n' )
+
+
+$newCode = @"
+
+        AnyThingNew
+
+    </LinearLayout>
+    
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"/>
+
+
+</LinearLayout>
 "@
 
 foreach ($name in $file_names)

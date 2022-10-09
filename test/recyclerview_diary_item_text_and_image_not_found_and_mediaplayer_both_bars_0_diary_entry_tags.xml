@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:layout_marginBottom="10dp"
     android:layout_marginTop="10dp">
-    AnythingNew
     
     <TextView
         android:layout_weight="1"
@@ -408,10 +407,9 @@
                 />
 
         </RelativeLayout>
-
+        AnyThingNew
 
     </LinearLayout>
-    AnythingNew
     
     <TextView
         android:layout_weight="1"
@@ -420,3 +418,4 @@
 
 
 </LinearLayout>
+
